@@ -5,10 +5,110 @@
     margin: 0;
     padding: 0;
     font-family: "Pacifico", cursive;
+    color: aliceblue;
 }
 
 #input-field-container{
     width: 100%;
     min-height: 100vh;
-    background: #7d559A;
+    background: linear-gradient(180deg, #120b4a, #7d559A);
+    padding: 12px;
+}
+
+.todo-section{
+    width: 100%;
+    max-width: 540px;
+    background: #29235d;
+    margin: 100px auto 20px;
+    padding: 40px 32px 72px;
+    border-radius: 12px;
+}
+
+#Page-heading{
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.input-section{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px ;
+    border-color: aliceblue;
+    border-style: groove;
+    width: 100%;
+    max-width: 216px;
+    border-radius: 8px;
+    background-color: #29235d;
+    margin: auto;
+}
+
+#plus-button{
+    width: 28px;
+    background-color: #29235d;
+    border: none;
+    border-left: aliceblue;
+    border-left-width: 2px;
+    border-left-style: groove;
+    color: aliceblue;
+}
+
+#input-field{
+    background-color: #29235d;
+    border: none;
+    color: aliceblue;
+}
+
+ul li {
+    list-style: none;
+    font-size: 16px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    padding-left: 48px;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background-image: url(Images/checkbox-unchecked.svg);
+    background-size: cover;
+    background-position: center;
+    left: 8px;
+}
+
+ul li.checked{
+    text-decoration: line-through;
+    color: lightgray;
+}
+
+ul li.checked::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background-image: url(Images/checkbox-checked.svg);
+    background-size: cover;
+    background-position: center;
+    left: 8px;
+}
+
+
+ul li span{
+    position: absolute;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+ul li span:hover{
+    background-color: #312a72;
 }
